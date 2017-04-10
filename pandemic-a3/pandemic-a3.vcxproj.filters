@@ -15,60 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Statistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Observer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ResearchStations.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ResearchStationsObserver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Subject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DiseasesObserver.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="StatisticObserver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Statistics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Observer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ResearchStations.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ResearchStationsObserver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Subject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Diseases.h">
+    <ClInclude Include="StatisticObserver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DiseasesObserver.h">
+    <ClInclude Include="ObserverDecorator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RedDisease.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BlueDisease.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="YellowDisease.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BlackDisease.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DiseaseDecorator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AddCube.h">
+    <ClInclude Include="CubeRatio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

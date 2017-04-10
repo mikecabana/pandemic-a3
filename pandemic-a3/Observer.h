@@ -1,9 +1,8 @@
-//Observer.h
 #pragma once
-class Observer{
+#include <string>
+class Observer {
 public:
 	~Observer();
-	virtual void Update() = 0;
-protected:
-	Observer();
+	virtual std::string Update() = 0;
+protected:Observer();
 };
