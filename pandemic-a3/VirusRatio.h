@@ -4,9 +4,9 @@
 
 class VirusRatio : public ObserverDecorator {
 public:
-	VirusRatio(Observer *decoratedObserver) : ObserverDecorator(decoratedObserver) {}
+	VirusRatio(Observer *decoratedObserver, Statistics *s) : ObserverDecorator(decoratedObserver, s) {}
 
 	std::string Update() {
-		return ObserverDecorator::Update() + "\nDisplay % of viruses cured";
+		return ObserverDecorator::Update() + "\n"+std::to_string(s->getCured())+"/4 of viruses cured";
 	}
 };

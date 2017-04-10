@@ -31,7 +31,7 @@ int main() {
 	switch (option) {
 	case 1: 
 		//decorator
-		sOb = new CubeRatio(sOb);
+		sOb = new CubeRatio(sOb, stat);
 		stat->Attach(sOb);
 
 		std::cout << "Type the color of cube to use (red/blue/black/yellow)" << std::endl;
@@ -43,7 +43,7 @@ int main() {
 	case 2: 
 		//decorator
 		
-		sOb = new StationRatio(sOb);
+		sOb = new StationRatio(sOb, stat);
 		stat->Attach(sOb);
 
 		std::cout << "Research station used" << std::endl;
@@ -53,7 +53,7 @@ int main() {
 		goto start;
 	case 3:
 		//decorator
-		sOb = new InfectedRatio(sOb);
+		sOb = new InfectedRatio(sOb, stat);
 		stat->Attach(sOb);
 
 		std::cout << "City infected" << std::endl;
@@ -63,7 +63,7 @@ int main() {
 		goto start;
 	case 4:
 		//decorator
-		sOb = new VirusRatio(sOb);
+		sOb = new VirusRatio(sOb, stat);
 		stat->Attach(sOb);
 
 		std::cout << "Virus cured" << std::endl;
@@ -73,7 +73,7 @@ int main() {
 		goto start;
 	case 5:
 		//decorator
-		sOb = new EradicatedRatio(sOb);
+		sOb = new EradicatedRatio(sOb, stat);
 		stat->Attach(sOb);
 
 		std::cout << "Virus eradicated" << std::endl;
@@ -84,7 +84,7 @@ int main() {
 	case 0:
 		std::cout << "Thanks for palying" << std::endl;
 		//decorator
-		sOb = new CubeRatio(new StationRatio(new InfectedRatio(new VirusRatio(new EradicatedRatio(sOb)))));
+		sOb = new CubeRatio(new StationRatio(new InfectedRatio(new VirusRatio(new EradicatedRatio(sOb,stat),stat),stat),stat),stat);
 		stat->Attach(sOb);
 		stat->Notify();
 		system("pause");

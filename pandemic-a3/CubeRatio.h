@@ -4,9 +4,9 @@
 
 class CubeRatio : public ObserverDecorator {
 public:
-	CubeRatio(Observer *decoratedObserver) : ObserverDecorator(decoratedObserver) {}
+	CubeRatio(Observer *decoratedObserver, Statistics *s) : ObserverDecorator(decoratedObserver, s) {}
 
 	std::string Update() {
-		return ObserverDecorator::Update() + "\nDisplay % of cubes available";
+		return ObserverDecorator::Update() + "\n"+ std::to_string(s->getCubes()) +"/96 of cubes available";
 	}
 };

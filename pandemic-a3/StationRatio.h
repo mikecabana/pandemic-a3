@@ -4,9 +4,9 @@
 
 class StationRatio : public ObserverDecorator {
 public:
-	StationRatio(Observer *decoratedObserver) : ObserverDecorator(decoratedObserver) {}
+	StationRatio(Observer *decoratedObserver, Statistics *s) : ObserverDecorator(decoratedObserver, s) {}
 
 	std::string Update() {
-		return ObserverDecorator::Update() + "\nDisplay % of stations available";
+		return ObserverDecorator::Update() + "\n" + std::to_string(s->getStations())+"/6 of stations available";
 	}
 };

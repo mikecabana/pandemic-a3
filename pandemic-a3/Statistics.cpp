@@ -1,6 +1,6 @@
 #include "Statistics.h"
 
-Statistics::Statistics() :redCubes(24), blueCubes(24), yellowCubes(24), blackCubes(24), stations(5), infected(13), cured(3), eradicated(1) {}
+Statistics::Statistics() :redCubes(24), blueCubes(24), yellowCubes(24), blackCubes(24), stations(6), infected(0), cured(0), eradicated(0) {}
 
 Statistics::~Statistics() {}
 

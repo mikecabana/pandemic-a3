@@ -3,9 +3,11 @@
 class ObserverDecorator : public Observer {
 protected:
 	Observer *decoratedObserver;
+	Statistics *s;
 public:
-	ObserverDecorator(Observer *decoratedObserver) {
+	ObserverDecorator(Observer *decoratedObserver, Statistics *s) {
 		this->decoratedObserver = decoratedObserver;
+		this->s = s;
 	}
 
 	std::string Update() {

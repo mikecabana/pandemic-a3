@@ -4,9 +4,9 @@
 
 class InfectedRatio : public ObserverDecorator {
 public:
-	InfectedRatio(Observer *decoratedObserver) : ObserverDecorator(decoratedObserver) {}
+	InfectedRatio(Observer *decoratedObserver, Statistics *s) : ObserverDecorator(decoratedObserver, s) {}
 
 	std::string Update() {
-		return ObserverDecorator::Update() + "\nDisplay % of infected cities";
+		return ObserverDecorator::Update() + "\n"+std::to_string(s->getCitiesInfected())+" infected cities";
 	}
 };
