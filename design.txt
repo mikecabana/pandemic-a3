@@ -1,0 +1,5 @@
+I implemented the observer pattern first similarly to assignment 2. My statistics class keeps track of cubes per color as well as total cubes. Also the number of research stations available, how many cities are infected, how many viruses have been cured and how many viruses have been erradicated. All of these are just int counts with getter functions for access.
+
+Everytime one of these counts is modified in someway, the Notify function is called and all the observers are updated with the new information.
+
+Since the Observer class is pure virtual, it made the most sense to me to use it as the base class for the decorator pattern. This means the Statistic observer is it's subclass and all decorators will be applied towards it. The driver shows how depending on which option is chosen, the observers will be decorated differently. The driver also has a final exit command that displays all the decorators applied to the observer at the same time.
