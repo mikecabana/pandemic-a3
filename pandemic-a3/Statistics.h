@@ -12,6 +12,8 @@ public:
 	int getBlueCubes();
 	int getYellowCubes();
 	int getBlackCubes();
+	//total count of cubes
+	int getCubes();
 	//get number of research stations available
 	int getStations();
 	//get number of infected cities

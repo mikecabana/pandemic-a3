@@ -10,5 +10,4 @@ public:
 	std::string Update();
 private:
 	Statistics *_subject;
-	std::string output = "Observers notified";
 };

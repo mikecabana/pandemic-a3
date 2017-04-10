@@ -50,5 +50,17 @@
     <ClInclude Include="CubeRatio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="StationRatio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InfectedRatio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VirusRatio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EradicatedRatio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

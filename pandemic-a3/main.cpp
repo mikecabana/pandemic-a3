@@ -1,15 +1,22 @@
 #include "Statistics.h"
 #include "StatisticObserver.h"
+
+//decorators
 #include "CubeRatio.h"
+#include "StationRatio.h"
+#include "InfectedRatio.h"
+#include "VirusRatio.h"
+#include "EradicatedRatio.h"
 
 int main() {
+	//statistic object
 	Statistics *stat = new Statistics();
-	Observer *sOb = new CubeRatio(new StatisticObserver(stat));
-
-	//adding decorator
-	//sOb = new CubeRatio(sOb);
-
+	
 	start:
+	
+	//observers
+	Observer *sOb = new StatisticObserver();
+	
 	std::cout << "Options" << std::endl;
 	std::cout << "1 - Use a colored virus cube" << std::endl;
 	std::cout << "2 - Use a research station" << std::endl;
@@ -23,28 +30,64 @@ int main() {
 	std::cin >> option;
 	switch (option) {
 	case 1: 
+		//decorator
+		sOb = new CubeRatio(sOb);
+		stat->Attach(sOb);
+
 		std::cout << "Type the color of cube to use (red/blue/black/yellow)" << std::endl;
 		std::cin >> color;
 		stat->useCube(color);
+		
+		stat->Detach(sOb);
 		goto start;
 	case 2: 
+		//decorator
+		
+		sOb = new StationRatio(sOb);
+		stat->Attach(sOb);
+
 		std::cout << "Research station used" << std::endl;
 		stat->useStations();
+
+		stat->Detach(sOb);
 		goto start;
 	case 3:
+		//decorator
+		sOb = new InfectedRatio(sOb);
+		stat->Attach(sOb);
+
 		std::cout << "City infected" << std::endl;
 		stat->incrementInfecetd();
+
+		stat->Detach(sOb);
 		goto start;
 	case 4:
+		//decorator
+		sOb = new VirusRatio(sOb);
+		stat->Attach(sOb);
+
 		std::cout << "Virus cured" << std::endl;
 		stat->incrementCure();
+
+		stat->Detach(sOb);
 		goto start;
 	case 5:
+		//decorator
+		sOb = new EradicatedRatio(sOb);
+		stat->Attach(sOb);
+
 		std::cout << "Virus eradicated" << std::endl;
 		stat->incrementEradicated();
+
+		stat->Detach(sOb);
 		goto start;
 	case 0:
-		std::cout << "Thanks for palying";
+		std::cout << "Thanks for palying" << std::endl;
+		//decorator
+		sOb = new CubeRatio(new StationRatio(new InfectedRatio(new VirusRatio(new EradicatedRatio(sOb)))));
+		stat->Attach(sOb);
+		stat->Notify();
+		system("pause");
 	}
 
 }

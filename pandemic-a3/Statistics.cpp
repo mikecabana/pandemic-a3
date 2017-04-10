@@ -20,6 +20,10 @@ int Statistics::getYellowCubes() {
 	return yellowCubes;
 }
 
+int Statistics::getCubes() {
+	return redCubes + yellowCubes + blueCubes + blackCubes;
+}
+
 int Statistics::getStations() {
 	return stations;
 }

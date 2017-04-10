@@ -86,11 +86,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CubeRatio.h" />
+    <ClInclude Include="EradicatedRatio.h" />
+    <ClInclude Include="InfectedRatio.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="ObserverDecorator.h" />
+    <ClInclude Include="StationRatio.h" />
     <ClInclude Include="StatisticObserver.h" />
     <ClInclude Include="Statistics.h" />
     <ClInclude Include="Subject.h" />
+    <ClInclude Include="VirusRatio.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
